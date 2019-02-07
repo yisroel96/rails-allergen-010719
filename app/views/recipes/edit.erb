@@ -1,0 +1,7 @@
+<h1>edit a recipe</h1>
+
+<%= form_for @recipe do |f| %>
+    <%= f.text_field :name %>
+    <%= f.collection_select(:user_id, User.all, :id, :name) %>
+    <%= f.submit %>
+    <% end %>
